@@ -26,7 +26,7 @@ hexo s
 ```
 
 ③ 关联 GitHub 仓库
-1. 在 GitHub 新建仓库（仓库名建议为 `<username>.github.io`，用于直接部署 GitHub Pages）
+1. 在 GitHub 新建仓库（仓库名为 `<username>.github.io`表示根仓库，便于直接部署 GitHub Pages）
 2. 将本地博客关联到远程仓库：
    ```bash
    git init
@@ -35,6 +35,7 @@ hexo s
    git remote add origin https://github.com/<username>/<username>.github.io.git
    git push -u origin main
    ```
+3. 需要在仓库的Settings中开启Pages服务，将分支设置为`gh-pages`，并将路径设置为`/(root)`。
 
 
 **2. 配置 GitHub Actions 自动部署**
@@ -143,11 +144,11 @@ jobs:
 ---
 # 基础信息
 title: Hexo博客Front-matter完全指南
-date: 2023-10-01 10:00:00  # 如不指定，自动生成
-updated: 2023-10-02 15:30:00  # 如不指定，自动生成
-tags: [Hexo, 教程, Front-matter]
-categories: [技术博客, Hexo教程]
-description: 本文详细介绍了Hexo博客中Front-matter的所有可用字段及其用法
+date: 2023-10-01 10:00:00           # 如不指定，自动生成
+updated: 2023-10-02 15:30:00        # 如不指定，自动生成
+tags: [📒Blog搭建, 📦分享, 🔍技巧, 👨🏼‍💻代码]
+categories: [👨🏼‍💻技术博文, 人工智能, ]
+description: 本文介绍了Hexo博客的快速开始。
 keywords: Hexo, Front-matter, 教程, 博客配置
 
 # 显示控制

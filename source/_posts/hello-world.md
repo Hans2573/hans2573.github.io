@@ -1,10 +1,18 @@
 ---
-title: Hello World
+title: "Hexo: Hello World"
 location: " 中国，天津"
 
-tags: [🧑‍💻教程]
-categories: [技术博客, Hexo教程]
+tags: [📒Blog搭建]
+categories: [👨🏼‍💻技术博文, Hexo教程]
 copyright_author: Hexo
+
+description: 本文介绍了Hexo博客的快速开始。
+
+comments: true
+aside: true
+toc: true
+toc_number: true
+toc_expand: false
 ---
 location:
 ---

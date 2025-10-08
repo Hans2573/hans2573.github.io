@@ -1,3 +1,5 @@
+# 页面和文章页是两回事：页面是标签页、分类页等，文章页是自己写的博文页面
+
 menu:
   文章:
     隧道: /archives/ || anzhiyu-icon-box-archive
@@ -22,10 +24,10 @@ menu:
 
 # nav相关配置
 nav:
-  enable: false
-  travelling: false
-  clock: false
-  menu:
+  enable: true  # 最左上六个点开关
+  travelling: true  # 左上，开往开关
+  clock: true
+  menu:  # nav 左侧项目按钮内的菜单
     - title: 网页
       item:
         - name: 博客
@@ -50,7 +52,7 @@ highlight_theme: light #  darker / pale night / light / ocean / mac / mac light 
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 330 # unit: px
+highlight_height_limit: 330 # unit: px  # 可配置代码高度限制，超出的部分会隐藏，并显示展开按钮，默认 330，可配置为 false。
 code_word_wrap: false
 
 # copy settings
@@ -65,15 +67,15 @@ copy:
 # social settings (社交图标设置)
 # formal:
 #   name: link || icon
-social:
-  # Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
-  # BiliBili: https://space.bilibili.com/372204786 || anzhiyu-icon-bilibili
+social:  # 右边头像右下角显示
+  Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
+  BiliBili: https://space.bilibili.com/372204786 || anzhiyu-icon-bilibili
 
 # 作者卡片 状态
 author_status:
-  enable: false
+  enable: true
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
-  statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
+  statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"  # 右侧头像右下角表情包
   skills:
     # - 🤖️ 数码科技爱好者
     # - 🔍 分享与热心帮助
@@ -149,7 +151,7 @@ disable_top_img: false
 index_img: false # "background: url() top / cover no-repeat"
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: false
+default_top_img: false  # 设置的是页面的顶部图
 
 cover:
   # display the cover or not (是否显示文章封面)
@@ -158,10 +160,10 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面显示的位置)
   # left/right/both
-  position: left
-  # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
-  default_cover:
-    # - /img/default_cover.jpg
+  position: both
+  # When 文章的 front-matter cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
+  default_cover: https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e146a8bbd.webp  # 修改需要hexo clean
+    # - /img/default_cover.jpg     # 当配置多张图片时,会随机选择一张作为 cover
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -174,13 +176,13 @@ error_404:
   subtitle: "请尝试站内搜索寻找文章"
   background: https://bu.dusays.com/2023/05/08/645907596997d.gif
 
-post_meta:
+post_meta: 
   page: # Home Page
     date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
-    date_format: simple # date/relative/simple 显示日期还是相对日期 或者 简单日期
+    date_format: date  # date/relative/simple 显示日期还是相对日期 或者 简单日期
     categories: true # true or false 主页是否显示分类
     tags: true # true or false 主页是否显示标籤
-    label: false # true or false 显示描述性文字
+    label: true # true or false 显示描述性文字
   post:
     date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
     date_format: date # date/relative 显示日期还是相对日期
@@ -225,12 +227,12 @@ toc:
   post: true
   page: false
   number: true
-  expand: false
+  expand: true  # 默认展开
   style_simple: false # for post
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   author_href:
   location: 中国，天津
   license: CC BY-NC-SA 4.0
@@ -972,7 +974,7 @@ note:
   # Offset also applied to label tag variables. This option can work with disabled note tag.
   light_bg_offset: 0
 
-icons:
+icons:  # 图标设置
   ali_iconfont_js: # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
   fontawesome: false #是否启用fontawesome6图标
   fontawesome_animation_css: #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css

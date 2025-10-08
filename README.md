@@ -134,7 +134,7 @@ jobs:
 
 2. **添加主题到项目中**
    ```bash
-   git submodule add https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
-    ```
-    使用 Git Submodule 方式可以方便地更新主题，同时不会将主题代码混入您的博客代码仓库中。
+   git clone -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
+   ```
 
+todo: https://docs.anheyu.com/global/extra.html

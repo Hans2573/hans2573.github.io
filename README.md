@@ -65,11 +65,11 @@ jobs:
     runs-on: ubuntu-latest  # 使用 Ubuntu 环境
 
     steps:
-      # 1. 拉取代码
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          submodules: true  # 若使用主题子模块，需开启
+      # # 1. 拉取代码   # 取消使用子模块，可能对主题进行编辑
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
+      #   with:
+      #     submodules: true  # 若使用主题子模块，需开启
 
       # 2. 安装 Node.js
       - name: Set up Node.js
@@ -124,55 +124,17 @@ jobs:
    - 进入仓库 → **Actions → Actions**，查看工作流是否运行成功。
    - 成功后，访问 `https://<username>.github.io` 即可看到部署的博客。
 
+
+我建议参照教程完整过一遍。  https://docs.anheyu.com/intro.html
+
 ## 使用安知鱼主题（anzhiyu）
 
 1. **查看主题官方文档**
    主题的详细配置说明请参考：[Hexo Theme Anzhiyu 官方文档](https://github.com/anzhiyu-c/hexo-theme-anzhiyu?tab=readme-ov-file)
 
-2. **添加主题到项目中**（使用 Git Submodule 方式）
+2. **添加主题到项目中**
    ```bash
    git submodule add https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
     ```
     使用 Git Submodule 方式可以方便地更新主题，同时不会将主题代码混入您的博客代码仓库中。
 
-
-
-## 写博客
-
-博客支持的 front-matter
-```markdown
----
-# 基础信息
-title: Hexo博客Front-matter完全指南
-date: 2023-10-01 10:00:00           # 如不指定，自动生成
-updated: 2023-10-02 15:30:00        # 如不指定，自动生成
-tags: [📒Blog搭建, 📦分享, 🔍技巧, 👨🏼‍💻代码]
-categories: [👨🏼‍💻技术博文, 人工智能, ]
-description: 本文介绍了Hexo博客的快速开始。
-keywords: Hexo, Front-matter, 教程, 博客配置
-
-# 显示控制
-comments: true
-aside: true
-toc: true
-toc_number: true
-toc_expand: false
-
-# 图片设置
-top_img: /images/hexo-cover.jpg
-cover: /images/post-cover.png
-
-# 特殊设置
-location: 上海
-mathjax: false
-main_color: #425AEF
-
-# 版权设置
-copyright: true
-copyright_author: 博主名称  # 如不指定，显示原创
-copyright_url: https://your-blog.com
----
-
-# 正文内容
-这里是文章的正文部分...
-```

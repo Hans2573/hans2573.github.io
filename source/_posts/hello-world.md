@@ -1,6 +1,5 @@
 ---
 title: "Hexo: Hello World"
-location: " 中国，天津"
 
 tags: [📒Blog搭建]
 categories: [👨🏼‍💻技术博文, Hexo教程]

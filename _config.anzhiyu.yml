@@ -201,7 +201,7 @@ mainTone:
 
 # wordcount (字数统计)
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -427,19 +427,19 @@ crisp:
 footer:
   owner:
     enable: true
-    since: 2020
+    since: 2025
   custom_text:
-  runtime:
+  runtime:  # 这是 footer的runtime，不是右侧的建站天数
     enable: false
-    launch_time: 04/01/2021 00:00:00 # 网站上线时间
+    launch_time: 10/08/2025 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
     offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
-  bdageitem:
-    enable: false
+  bdageitem:  # 页脚徽标
+    enable: true
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
@@ -447,15 +447,15 @@ footer:
       - link: https://hexo.anheyu.com/
         shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
         message: 本站使用AnZhiYu主题
-      # - link: https://www.dogecloud.com/
-      #   shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg
-      #   message: 本站使用多吉云为静态资源提供CDN加速
-      # - link: https://github.com/
-      #   shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg
-      #   message: 本站项目由Github托管
-      # - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-      #   shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
-      #   message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+      - link: https://www.dogecloud.com/
+        shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg
+        message: 本站使用多吉云为静态资源提供CDN加速
+      - link: https://github.com/
+        shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg
+        message: 本站项目由Github托管
+      - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+        shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
+        message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
   socialBar:
     enable: false
     centerImg:
@@ -807,18 +807,18 @@ aside:
     tag: true
     category: true
   card_author:
-    enable: true
-    description: # <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
-    name_link: /
+    enable: true  # 鼠标悬停到头像上
+    description: <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
+    name_link: /  # 点击名字跳转的页面 如 /about
 
-  card_announcement:
+  card_announcement:  # 公告栏
     enable: false
     content: 欢迎来看我的博客鸭~
-  card_weixin:
+  card_weixin: # 微信公众号
     enable: true
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
     backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
-  card_recent_post:
+  card_recent_post:  # 在博文详情页才显示；
     enable: true
     limit: 5 # if set 0 will show all
     sort: date # date or updated
@@ -858,9 +858,9 @@ busuanzi:
 
 # Time difference between publish date and now (网页运行时间)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
-runtimeshow:
+runtimeshow:  # 右侧 网站运行时间
   enable: true
-  publish_date: 4/1/2021 00:00:00
+  publish_date: 10/8/2025 00:00:00
 
 # Console - Newest Comments
 newest_comments:
@@ -877,11 +877,11 @@ newest_comments:
 translate:
   enable: true
   # The text of a button
-  default: 繁
+  default: 简
   # Right-click menu default text
   rightMenuMsgDefault: "轉為繁體"
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
-  defaultEncoding: 2
+  defaultEncoding: 1
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
@@ -1013,8 +1013,8 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
-  enable: false
-  field: site # site/post
+  enable: true
+  field: post # site/post
 
 # Lazyload (图片懒加载)
 # https://github.com/verlok/vanilla-lazyload
@@ -1149,7 +1149,7 @@ ptool:
   share_weibo: true
   share_copyurl: true
   categories: false # 是否显示分类
-  mode: # 运营模式与责任，不配置不显示
+  mode: /wechat/ # 运营模式与责任，不配置不显示
 
 # 欢迎语配置
 greetingBox:
@@ -1220,11 +1220,11 @@ agreementPopup:
 
 # 右键菜单
 rightClickMenu:
-  enable: false
-
-# 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
-peoplecanvas:
   enable: true
+
+# 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置[blog]/source/_data/creativity.yml
+peoplecanvas: # 首页滚动图
+  enable: false
   img: https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png
 
 # 动效

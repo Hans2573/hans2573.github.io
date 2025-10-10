@@ -1,8 +1,8 @@
 ---
 title: "Hexo: Hello World"
 
-tags: [Blog搭建]
-categories: [👨🏼‍💻技术博文]
+tags: [Blog搭建, ]
+categories: [👨🏼‍💻技术博文, ]
 copyright_author: Hexo
 
 description: 本文介绍了Hexo博客的快速开始。
